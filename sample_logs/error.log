@@ -1,0 +1,7 @@
+[2026-04-16 21:00:01] ERROR - NullPointerException at line 42 in auth_service.py
+[2026-04-16 21:00:02] ERROR - Failed to authenticate user: token expired
+[2026-04-16 21:00:10] ERROR - Database connection timeout after 30s at db_connector.py line 87
+[2026-04-16 21:00:15] CRITICAL - Server memory usage exceeded 95% threshold
+[2026-04-16 21:00:20] ERROR - Unhandled exception in payment_service.py line 134: IndexOutOfBoundsException
+[2026-04-16 21:00:25] WARNING - Retry attempt 3/3 failed for API endpoint /api/v1/orders
+[2026-04-16 21:00:30] CRITICAL - Application crash detected in main_service.py line 201
