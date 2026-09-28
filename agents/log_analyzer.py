@@ -14,7 +14,7 @@ def analyze_log(log_content: str) -> dict:
         reading and analyzing server logs. You can instantly identify the most 
         critical errors and understand their root causes.""",
         verbose=True,
-        llm="groq/llama-3.3-70b-versatile"
+        llm="groq/qwen/qwen3.8-27b"
     )
     
     task = Task(
