@@ -1,7 +1,11 @@
 from crewai import Agent, Task, Crew
+import crewai.llms.cache as crew_cache
 from dotenv import load_dotenv
 from tools.search_tool import search_fix
 import os
+
+# Disable CrewAI cache markers for Groq
+crew_cache.mark_cache_breakpoint = lambda msg: msg
 
 load_dotenv()
 
@@ -18,7 +22,7 @@ def find_fix(error_message: str) -> dict:
         debugging and fixing production issues. You analyze search results 
         and extract the most practical, actionable fix for any error.""",
         verbose=True,
-        llm="groq/llama-3.3-70b-versatile"
+        llm="groq/qwen/qwen3.8-27b"
     )
     
     task = Task(
