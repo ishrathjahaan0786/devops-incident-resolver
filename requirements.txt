@@ -1,6 +1,6 @@
 streamlit
-crewai[litellm]
-crewai-tools
+crewai[litellm]==1.14.1
+crewai-tools==1.14.1
 tavily-python
 PyGithub
 python-dotenv
