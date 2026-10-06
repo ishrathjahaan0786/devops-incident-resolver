@@ -1,5 +1,11 @@
 import streamlit as st
-from agents.manager import run_incident_resolver
+
+try:
+    from agents.manager import run_incident_resolver
+except Exception as e:
+    st.error("Import error:")
+    st.code(f"{type(e).__name__}: {e}")
+    st.stop()
 from dotenv import load_dotenv
 import os
 import time
