@@ -1,6 +1,5 @@
 streamlit
 crewai[litellm]==1.14.4
-crewai-tools==1.14.4
 tavily-python
 PyGithub
 python-dotenv
