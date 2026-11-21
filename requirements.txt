@@ -1,6 +1,8 @@
 streamlit
-crewai[litellm]==1.14.4
+crewai==1.14.4
+litellm==1.84.0
 tavily-python
 PyGithub
-python-dotenv
+python-dotenv>=1.2.2,<2
 groq
+openai>=2.30.0,<3
