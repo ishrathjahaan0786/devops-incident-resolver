@@ -1,10 +1,13 @@
 from crewai import Agent, Task, Crew
-import crewai.llms.cache as crew_cache
 from dotenv import load_dotenv
 import os
 
-# Disable CrewAI cache markers for Groq
-crew_cache.mark_cache_breakpoint = lambda msg: msg
+# Compatibility workaround for Groq
+try:
+    import crewai.llms.cache as crew_cache
+    crew_cache.mark_cache_breakpoint = lambda msg: msg
+except (ImportError, AttributeError):
+    pass
 
 load_dotenv()
 
